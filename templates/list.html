@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>メモ一覧</title>
+</head>
+<body>
+    <h1>メモ一覧</h1>
+
+    <a href="/add">＋ 新規メモ作成</a>
+    <ul>
+        {% for memo in memos %}
+            <li>
+                {{ memo[1] }}
+                [<a href="/edit/{{ memo[0] }}">編集</a>]
+                [<a href="/delete/{{ memo[0] }}">削除</a>]
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

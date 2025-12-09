@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>メモ {{ memo and '編集' or '作成' }}</title>
+</head>
+<body>
+    <h1>メモ {{ memo and '編集' or '作成' }}</h1>
+
+    <form method="POST">
+        <input
+            type="text"
+            name="title"
+            placeholder="タイトル"
+            value="{{ memo[1] if memo else '' }}"
+            required
+        />
+        <button type="submit">保存</button>
+    </form>
+
+    <a href="/">戻る</a>
+</body>
+</html>
